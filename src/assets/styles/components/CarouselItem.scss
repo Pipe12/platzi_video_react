@@ -1,0 +1,67 @@
+.carousel-item {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: coral;
+  overflow: hidden;
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+  transition: 500ms;
+  transform-origin: center left;
+}
+
+.carousel-item:hover ~ .carousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carousel-item {
+  opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+} 
+
+.carousel__container:hover  .carousel-item__details:hover {
+  opacity: 1;
+}
+
+.carousel-item__img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+.carousel-item__details {
+  background-color: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  font-family: 'Muli', sans-serif;
+  font-size: 10px;
+  color: white;
+  opacity: 0;
+  transition: 450ms opacity;
+  padding: 10px;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.carousel-item__details--controls a img {
+  width: 15%;
+}
+
+.carousel-item__details--title {
+  margin: 5px 0px 2px 0px;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.carousel-item__details--date {
+  font-size: 8px;
+}
