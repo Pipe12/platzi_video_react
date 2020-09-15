@@ -1,9 +1,11 @@
+@import './Vars.scss';
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: #854DFB;
-  font-family: 'Muli', sans-serif;
+  background-color: $bg-color;
+  font-family: $theme-font;
 }
