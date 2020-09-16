@@ -9,7 +9,7 @@ import '../assets/styles/App.scss';
 
 const App = () => {
   // Aqui coloco toda la logica que voy a utilizar.
-  const [videos, setVideos] = useState([]);
+  const [videos, setVideos] = useState({ mylist: [], trends: [], originals: [] });
 
   useEffect(() => {
     fetch('http://localhost:3000/initialState')
@@ -17,36 +17,37 @@ const App = () => {
       .then((data) => setVideos(data));
   }, []);
 
-  console.log(videos);
+  // console.log(videos);
 
   return (
     <div className='App'>
       <Header />
       <Search />
 
-      <Categories title='Mi lista'>
-        <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-        </Carousel>
-      </Categories>
+      {videos.mylist.length > 0 && (
+        <Categories title='Mi lista'>
+          <Carousel>
+            <CarouselItem />
+          </Carousel>
+        </Categories>
+      )}
 
-      <Categories title='Tendencias'>
-        <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-        </Carousel>
-      </Categories>
+      {videos.trends.length > 0 && (
+        <Categories title='Tendencias'>
+          <Carousel>
+            {/* {videos.trends.map(console.log('te amo Sara!!!'))} */}
+            <CarouselItem />
+          </Carousel>
+        </Categories>
+      )}
 
-      <Categories title='Originales de Platzi'>
-        <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-        </Carousel>
-      </Categories>
+      {videos.originals.length > 0 && (
+        <Categories title='Originales de Platzi'>
+          <Carousel>
+            <CarouselItem />
+          </Carousel>
+        </Categories>
+      )}
 
       <Footer />
     </div>
