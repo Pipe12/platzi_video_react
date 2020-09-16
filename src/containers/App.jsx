@@ -32,11 +32,12 @@ const App = () => {
         </Categories>
       )}
 
-      {videos.trends.length > 0 && (
+      {videos.originals.length > 0 && (
         <Categories title='Tendencias'>
           <Carousel>
-            {/* {videos.trends.map(console.log('te amo Sara!!!'))} */}
-            <CarouselItem />
+            {videos.trends.map((item) =>
+              <CarouselItem key={item.id} {...item} />
+            )}
           </Carousel>
         </Categories>
       )}
@@ -44,7 +45,9 @@ const App = () => {
       {videos.originals.length > 0 && (
         <Categories title='Originales de Platzi'>
           <Carousel>
-            <CarouselItem />
+            {videos.originals.map((item) =>
+              <CarouselItem key={item.id} {...item} />
+            )}
           </Carousel>
         </Categories>
       )}
