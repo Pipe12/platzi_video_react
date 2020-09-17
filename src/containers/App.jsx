@@ -20,7 +20,7 @@ const App = () => {
       {initialState.mylist.length > 0 && (
         <Categories title='Mi lista'>
           <Carousel>
-            {initialState.trends.map((item) => <CarouselItem key={ item.id} {...item} />)}
+            {initialState.trends.map((item) => <CarouselItem key={item.id} {...item} />)}
           </Carousel>
         </Categories>
       )}
