@@ -1,0 +1,65 @@
+.signin {
+  font-family: 'Muli', sans-serif;
+  background: linear-gradient(#3EC97E, #854DFB);
+  display: flex;
+  justify-content: center;
+}
+
+.signin__container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 40px;
+  color: white;
+  min-height: 700px;
+  min-width: 300px;
+  padding: 60px 68px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 10px; 
+}
+
+.signin__container--form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  margin-bottom: 10px;
+  height: 50px;
+  color: white;
+  padding: 0px 20px;
+  outline: none;
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+}
+
+.input::placeholder {
+  color: white;
+}
+
+.button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50px;
+  height: 50px;
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  margin: 10px 0px;
+}
+
+.signin__container a {
+  color: white;
+  text-decoration: none;
+  align-self: center;
+}
+
+.signin__container a:hover {
+  text-decoration: underline;
+}
