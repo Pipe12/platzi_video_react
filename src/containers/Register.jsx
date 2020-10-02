@@ -9,7 +9,7 @@ const Register = () => (
         <input type='text' className='input' placeholder='Nombre' />
         <input type='email' className='input' placeholder='Correo' />
         <input type='password' className='input' placeholder='Contraceña' />
-        <button className='button'>Registrame</button>
+        <button className='button' type='submit'>Registrame</button>
       </form>
       <a href='/login'>Iniciar sesión</a>
     </div>
