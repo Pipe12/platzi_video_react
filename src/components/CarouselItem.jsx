@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { PropTypes } from 'prop-types';
+import PropTypes from 'prop-types';
 import { setFavorite } from '../actions';
 import '../assets/styles/components/CarouselItem.scss';
 import playIcon from '../assets/static/play.png';
@@ -9,7 +9,7 @@ import plusIcon from '../assets/static/plus.png';
 const CarouselItem = (props) => {
   const { cover, title, year, contentRating, duration } = props;
   const handleSetFavorite = () => {
-    props.setFavorite = ({
+    props.setFavorite({
       cover, title, year, contentRating, duration
     });
   };
@@ -34,16 +34,16 @@ const CarouselItem = (props) => {
   );
 };
 
-CarouselItem.PropTypes = {
+CarouselItem.propTypes = {
   cover: PropTypes.string,
   title: PropTypes.string,
   year: PropTypes.number,
   contentRating: PropTypes.string,
-  duration: PropTypes.string,
-};
+  duration: PropTypes.number,
+}
 
 const mapDispatchToProps = {
-  setFavorite,
+  setFavorite
 };
 
 export default connect(null, mapDispatchToProps)(CarouselItem);
