@@ -15,7 +15,13 @@ const Home = ({ myList, trends, originals }) => {
       {myList.length > 0 && (
         <Categories title='Mi lista'>
           <Carousel>
-            {myList.map((item) => <CarouselItem key={item.id} {...item} />)}
+            {myList.map((item) =>
+              <CarouselItem
+                key={item.id}
+                {...item} 
+                isList
+              />
+            )}
           </Carousel>
         </Categories>
       )}
@@ -23,7 +29,8 @@ const Home = ({ myList, trends, originals }) => {
       {trends.length > 0 && (
         <Categories title='Tendencias'>
           <Carousel>
-            {trends.map((item) => <CarouselItem key={item.id} {...item} />)}
+            {trends.map((item) => 
+              <CarouselItem key={item.id} {...item} />)}
           </Carousel>
         </Categories>
       )}
@@ -31,7 +38,8 @@ const Home = ({ myList, trends, originals }) => {
       {originals.length > 0 && (
         <Categories title='Originales de Platzi'>
           <Carousel>
-            {originals.map((item) => <CarouselItem key={item.id} {...item} />)}
+            {originals.map((item) => 
+              <CarouselItem key={item.id} {...item} />)}
           </Carousel>
         </Categories>
       )}
