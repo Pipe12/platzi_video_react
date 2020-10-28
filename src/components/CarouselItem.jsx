@@ -26,17 +26,18 @@ const CarouselItem = (props) => {
             src={playIcon}
             alt='Play Icon'
           />
-          {isList ?
-            <img
-              src={removeIcon}
-              alt='Remove Icon'
-              onClick={() => handleDeleteFavorite(id)}
-            /> :
-            <img
-              src={plusIcon}
-              alt='Plus Icon'
-              onClick={handleSetFavorite}
-            />
+          {
+            isList ?
+              <img
+                src={removeIcon}
+                alt='Remove Icon'
+                onClick={() => handleDeleteFavorite(id)}
+              /> :
+              <img
+                src={plusIcon}
+                alt='Plus Icon'
+                onClick={handleSetFavorite}
+              />
           }
         </div>
         <h4 className='carousel-item__details--title'>{title}</h4>
