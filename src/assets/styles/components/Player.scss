@@ -8,18 +8,18 @@ video {
   left: 0;
 }
 
-video:hover .Player-back {
+video:hover .player-back {
   display: block;
 }
 
-.Player-back {
+.player-back {
   position: fixed;
   top: 5px;
   left: 5px;
   font-size: 12px;
 }
 
-.Player-back button {
+.player-back button {
   text-decoration: none;
   color: white;
   background: rgba(0, 0, 0, .3);
