@@ -2,7 +2,7 @@ const reducer = (state, action) => {
 
   switch (action.type) {
     case 'SET_FAVORITE':
-      const exist = state.myList.find( item => item.id === action.payload.id );
+      const exist = state.myList.find( (item) => item.id === action.payload.id );
       if (exist) return { ...state };
       return {
         ...state,
@@ -27,6 +27,13 @@ const reducer = (state, action) => {
       return {
         ...state,
         user: action.payload,
+      };
+    case 'GET_VIDEO_SOURCE':
+      return {
+        ...state,
+        playing: state.trends.find((item) => item.id === Number(action.payload)) ||
+        state.originals.find((item) => item.id === Number(action.payload)) ||
+        [],
       };
     default:
       return state;
